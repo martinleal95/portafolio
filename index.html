@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Martín Leal — Desarrollador de sistemas · Norte Sistemas</title>
+  <meta name="description" content="Portafolio de Martín Leal, desarrollador de sistemas. Sistemas de gestión y sitios web a medida con SQL, Python, Next.js y Supabase. Norte Sistemas.">
+  <meta name="theme-color" content="#F2EFE8">
+  <meta property="og:title" content="Martín Leal — Desarrollador de sistemas">
+  <meta property="og:description" content="Sistemas de gestión y sitios web a medida. Norte Sistemas.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <link rel="icon" href="assets/norte-emblema.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-mode="paper">
+
+  <!-- Emblema de Norte Sistemas (vectorizado desde el logo original) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="emblem" viewBox="0 0 467 597"><path fill-rule="evenodd" d="M231 4 L228 7 L226 13 L214 73 L211 78 L172 85 L143 95 L117 108 L97 121 L82 133 L58 157 L44 175 L33 192 L23 212 L13 239 L5 278 L4 317 L10 356 L21 391 L38 423 L58 450 L52 466 L52 480 L54 487 L60 498 L69 507 L82 514 L99 516 L108 514 L118 509 L128 499 L134 489 L137 476 L136 464 L131 452 L119 439 L103 431 L89 430 L72 408 L55 374 L46 344 L42 318 L44 316 L53 317 L106 331 L151 341 L157 344 L150 358 L147 361 L145 366 L120 405 L121 410 L126 409 L183 374 L185 376 L201 464 L205 480 L205 485 L224 577 L228 589 L234 593 L241 586 L247 559 L282 376 L284 374 L329 402 L347 411 L348 410 L347 405 L310 345 L313 342 L349 333 L353 333 L420 316 L424 317 L422 338 L414 367 L401 396 L388 417 L370 439 L353 456 L336 457 L323 462 L310 474 L304 485 L302 495 L303 508 L312 526 L322 535 L333 540 L351 541 L358 539 L371 531 L377 525 L383 515 L386 503 L386 495 L382 480 L406 456 L421 437 L433 418 L445 394 L452 376 L460 344 L463 320 L463 289 L457 251 L449 224 L434 192 L413 162 L379 128 L366 118 L345 105 L327 96 L299 86 L274 80 L256 78 L253 75 L253 70 L240 9 L236 4Z M337 486 L349 485 L352 486 L356 490 L358 494 L358 503 L352 511 L347 513 L341 513 L336 511 L332 507 L330 497 L332 491Z M86 461 L90 459 L98 459 L103 461 L106 464 L109 475 L107 481 L103 485 L98 487 L92 487 L87 485 L82 480 L81 468Z M233 170 L236 173 L237 202 L238 203 L240 244 L243 272 L245 274 L256 278 L262 283 L267 291 L269 302 L271 305 L284 307 L319 309 L321 311 L318 313 L273 318 L269 321 L266 330 L259 338 L251 343 L246 344 L243 347 L241 352 L236 435 L234 439 L231 436 L226 359 L224 347 L221 344 L207 337 L202 331 L198 321 L194 318 L148 313 L145 311 L147 309 L193 306 L196 304 L199 293 L204 284 L212 277 L224 272 L227 251 L231 173Z M263 118 L273 119 L300 127 L330 141 L354 157 L378 180 L394 201 L409 229 L421 266 L424 287 L422 289 L368 279 L324 269 L319 269 L311 265 L326 239 L347 207 L347 203 L346 202 L340 203 L286 235 L283 233 L280 212 L278 207 L264 130 L262 125Z M204 118 L205 124 L194 176 L184 233 L180 235 L125 202 L120 203 L120 207 L154 260 L156 266 L150 269 L76 283 L51 289 L44 289 L43 283 L46 266 L57 231 L72 203 L90 179 L110 160 L124 149 L137 141 L162 129 L186 121 L198 118Z"/></symbol>
+  </svg>
+
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <div class="progress" aria-hidden="true"><i></i></div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#inicio" aria-label="Norte Sistemas, ir al inicio">
+        <svg aria-hidden="true"><use href="#emblem"/></svg>
+        <span>Norte Sistemas</span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#stack">Stack</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <span class="clock" id="clock" aria-hidden="true">ART --:--</span>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio" data-mode="paper" aria-labelledby="hero-title">
+      <div class="wrap">
+        <p class="label hero__meta">
+          <span>Desarrollador de sistemas</span>
+          <span>Norte Sistemas</span>
+          <span>Argentina · UTC−3</span>
+        </p>
+
+        <h1 class="hero__name" id="hero-title" aria-label="Martín Leal">
+          <span class="mask" aria-hidden="true"><span>Martín</span></span>
+          <span class="mask l2" aria-hidden="true" style="--i:1"><span>Leal<span class="dot">.</span></span></span>
+        </h1>
+
+        <div class="hero__grid">
+          <p class="hero__lead reveal">
+            Diseño y construyo <strong>sistemas de gestión y sitios web a medida</strong>. Vengo del mundo de la tesorería y las cobranzas: primero entiendo cómo funciona el negocio, después lo convierto en software.
+          </p>
+
+          <div class="terminal reveal" style="--i:2" aria-label="Consulta SQL de presentación">
+            <div class="terminal__bar" aria-hidden="true"><i></i><i></i><i></i><span>norte.sql</span></div>
+            <div class="terminal__body">
+              <div class="terminal__cmd" aria-hidden="true">$ psql norte_sistemas</div>
+              <pre class="terminal__sql" id="sql" data-text="SELECT nombre, rol, formacion, proyecto&#10;FROM desarrollador&#10;WHERE nombre = 'Martín Leal';"><span class="kw">SELECT</span> nombre, rol, formacion, proyecto
+<span class="kw">FROM</span> desarrollador
+<span class="kw">WHERE</span> nombre = <span class="str">'Martín Leal'</span>;</pre>
+              <dl class="terminal__result is-in" id="sql-result">
+                <dt>nombre</dt><dd>Martín Leal</dd>
+                <dt>rol</dt><dd>Desarrollador de sistemas</dd>
+                <dt>formacion</dt><dd>Tecnicatura Superior en Desarrollo de Software (en curso)</dd>
+                <dt>proyecto</dt><dd>Norte Sistemas</dd>
+                <dt>estado</dt><dd class="ok">abierto a proyectos</dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="hero__actions reveal" style="--i:1">
+            <a class="btn btn--signal" href="#proyectos" data-magnetic>Ver proyectos <span class="arrow" aria-hidden="true">↘</span></a>
+            <a class="btn" href="#contacto" data-magnetic>Contactarme <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>SQL</span><span>MySQL</span><span>PostgreSQL</span><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Next.js</span><span>HTML</span><span>CSS</span><span>Git</span>
+          <span>SQL</span><span>MySQL</span><span>PostgreSQL</span><span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Next.js</span><span>HTML</span><span>CSS</span><span>Git</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROYECTOS ================= -->
+    <section class="section" id="proyectos" data-mode="paper" aria-labelledby="proyectos-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="label label--muted reveal">01 — Proyectos</p>
+          <h2 class="title" id="proyectos-title">
+            <span class="mask"><span>Software que resuelve</span></span>
+            <span class="mask" style="--i:1"><span><em>problemas</em> reales.</span></span>
+          </h2>
+          <p class="section__intro reveal">Cuatro proyectos de distintos tamaños. Los repositorios de clientes son privados: te muestro cómo funcionan en una demo.</p>
+        </header>
+
+        <div class="projects">
+
+          <!-- 01 · Pro-Athletic -->
+          <article class="project project--feature">
+            <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20de%20Pro-Athletic" aria-label="Pedir una demo de Pro-Athletic" data-tilt>
+              <span class="project__index">01</span>
+              <div class="shot shot--app" role="img" aria-label="Ilustración esquemática de un panel de gestión con estadísticas y gráfico de progreso">
+                <div class="shot__bar"><i></i><i></i><i></i><b></b></div>
+                <div class="shot__body">
+                  <aside><i></i><i></i><i></i><i></i></aside>
+                  <div class="main">
+                    <div class="kpis"><i class="line"></i><i class="line"></i><i class="soft"></i></div>
+                    <div class="chart"><i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:44%"></i><i style="--h:70%"></i><i style="--h:92%"></i><i style="--h:66%"></i><i style="--h:80%"></i></div>
+                  </div>
+                </div>
+              </div>
+              <span class="project__cta">Pedir demo ↗</span>
+            </a>
+            <div class="project__body reveal">
+              <p class="project__state">Proyecto final de la tecnicatura</p>
+              <h3 class="project__title">Pro-Athletic</h3>
+              <p class="project__desc">Sistema de gestión y seguimiento del entrenamiento físico para gimnasios, clubes y centros de entrenamiento. Conecta los recursos del establecimiento con sus profesionales y sus abonados.</p>
+              <ul class="project__points">
+                <li>Editor de rutinas, plantillas y pantalla “Hoy”</li>
+                <li>Registro de entrenamientos, progreso y avisos</li>
+                <li>App instalable (PWA), pruebas automáticas y backup diario cifrado</li>
+              </ul>
+              <ul class="tags"><li>Next.js</li><li>Supabase</li><li>PostgreSQL</li><li>PWA</li><li>Zod</li></ul>
+              <p class="links"><span>Repositorio privado</span></p>
+            </div>
+          </article>
+
+          <!-- 02 · Farmacia -->
+          <article class="project">
+            <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20de%20la%20web%20para%20farmacia" aria-label="Pedir una demo de la web para farmacia" data-tilt>
+              <span class="project__index">02</span>
+              <div class="shot shot--store" role="img" aria-label="Ilustración esquemática de un catálogo de productos con banner y grilla">
+                <div class="shot__bar"><i></i><i></i><i></i><b></b></div>
+                <div class="shot__body">
+                  <div class="head"><i class="fill"></i><i class="soft"></i><i class="sig"></i></div>
+                  <i class="sig"></i>
+                  <div class="grid4"><i></i><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <span class="project__cta">Pedir demo ↗</span>
+            </a>
+            <div class="project__body reveal">
+              <p class="project__state">En pruebas</p>
+              <h3 class="project__title">Catálogo y pedidos para farmacia</h3>
+              <p class="project__desc">Catálogo, promociones y pedidos por WhatsApp, con un panel privado para administrar productos, categorías e imágenes. Sin frameworks: la seguridad la impone la base de datos.</p>
+              <ul class="project__points">
+                <li>Reglas de negocio y permisos en PostgreSQL (RLS)</li>
+                <li>Precios y promociones siempre al día</li>
+              </ul>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Supabase</li><li>SQL</li></ul>
+              <p class="links"><span>Repositorio privado</span></p>
+            </div>
+          </article>
+
+          <!-- 03 · Climatización -->
+          <article class="project">
+            <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20del%20sitio%20para%20climatizaci%C3%B3n" aria-label="Pedir una demo del sitio para empresa de climatización" data-tilt>
+              <span class="project__index">03</span>
+              <div class="shot shot--cool" role="img" aria-label="Ilustración esquemática de un sitio corporativo con titular, botón y un dial de temperatura">
+                <div class="shot__bar"><i></i><i></i><i></i><b></b></div>
+                <div class="shot__body">
+                  <div class="copy"><i></i><i></i><i></i><i></i></div>
+                  <div class="dialwrap"><div class="dial"></div><b>22°</b></div>
+                </div>
+              </div>
+              <span class="project__cta">Pedir demo ↗</span>
+            </a>
+            <div class="project__body reveal">
+              <p class="project__state">Propuesta · plantilla reutilizable</p>
+              <h3 class="project__title">Sitio para empresa de climatización</h3>
+              <p class="project__desc">Plantilla corporativa donde todos los datos de la empresa viven en un único archivo de configuración. Incluye calculadora de eficiencia energética y widget de emergencias que deriva a WhatsApp.</p>
+              <ul class="project__points">
+                <li>77 pruebas automáticas y CI en GitHub</li>
+                <li>Tema claro/oscuro, accesibilidad y cabeceras de seguridad</li>
+              </ul>
+              <ul class="tags"><li>Next.js</li><li>React</li><li>TypeScript</li><li>GSAP</li><li>Jest</li></ul>
+              <p class="links"><span>Repositorio privado</span></p>
+            </div>
+          </article>
+
+          <!-- 04 · Talonarios -->
+          <article class="project">
+            <a class="project__media" href="https://github.com/martinleal95/app-talonarios" target="_blank" rel="noopener" aria-label="Ver app-talonarios en GitHub" data-tilt>
+              <span class="project__index">04</span>
+              <div class="shot shot--ticket" role="img" aria-label="Ilustración esquemática de talonarios numerados listos para imprimir">
+                <div class="shot__bar"><i></i><i></i><i></i><b></b></div>
+                <div class="shot__body">
+                  <div class="tk"><span>N° 001</span><span>001</span></div>
+                  <div class="tk"><span>N° 002</span><span>002</span></div>
+                  <div class="tk"><span>N° 003</span><span>003</span></div>
+                  <div class="tk"><span>N° 004</span><span>004</span></div>
+                  <div class="tk"><span>N° 005</span><span>005</span></div>
+                  <div class="tk"><span>N° 006</span><span>006</span></div>
+                </div>
+              </div>
+              <span class="project__cta">Ver código ↗</span>
+            </a>
+            <div class="project__body reveal">
+              <p class="project__state">Código abierto</p>
+              <h3 class="project__title">App de talonarios y rifas</h3>
+              <p class="project__desc">Genera talonarios o rifas con la cantidad de números que necesites y devuelve un PDF listo para imprimir.</p>
+              <ul class="tags"><li>PDF</li><li>Utilidad</li></ul>
+              <p class="links"><a href="https://github.com/martinleal95/app-talonarios" target="_blank" rel="noopener">Código en GitHub ↗</a></p>
+            </div>
+          </article>
+
+          <!-- CTA -->
+          <aside class="project project--cta reveal">
+            <p class="label">¿Tenés un proceso que hoy hacés a mano?</p>
+            <h3 class="project__title">Lo convertimos en un sistema.</h3>
+            <a class="btn" href="#contacto" data-magnetic>Contame tu caso <span class="arrow" aria-hidden="true">↗</span></a>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STACK ================= -->
+    <section class="section" id="stack" data-mode="ink" aria-labelledby="stack-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="label label--muted reveal">02 — Stack</p>
+          <h2 class="title" id="stack-title">
+            <span class="mask"><span>Tres capas,</span></span>
+            <span class="mask" style="--i:1"><span>un <em>sistema</em>.</span></span>
+          </h2>
+          <p class="section__intro reveal">Del dato a la pantalla: cada capa con las herramientas que uso para construirla.</p>
+        </header>
+
+        <div class="stack">
+
+          <article class="panel reveal" style="--i:0">
+            <div class="panel__no"><b>01</b><span class="label label--muted">Datos</span></div>
+            <h3>Bases de datos</h3>
+            <table class="dbtable">
+              <caption>TABLE stack_datos</caption>
+              <thead><tr><th>habilidad</th><th>uso</th></tr></thead>
+              <tbody>
+                <tr><td>SQL</td><td>consultas, JOIN, modelado</td></tr>
+                <tr><td>MySQL</td><td>bases relacionales</td></tr>
+                <tr><td>PostgreSQL</td><td>Supabase · RLS · migraciones</td></tr>
+              </tbody>
+            </table>
+            <p class="panel__cap">Reglas de negocio y permisos en la base, no solo en la pantalla.</p>
+          </article>
+
+          <article class="panel reveal" style="--i:1">
+            <div class="panel__no"><b>02</b><span class="label label--muted">Lógica</span></div>
+            <h3>Backend y scripts</h3>
+<pre class="code" aria-label="Diccionario de Python con las herramientas de la capa de lógica"><span class="c"># stack_logica.py</span>
+<span class="v">stack</span> = {
+    <span class="s">"lenguajes"</span>: [<span class="s">"Python"</span>,
+                  <span class="s">"JavaScript"</span>,
+                  <span class="s">"TypeScript"</span>],
+    <span class="s">"web"</span>: [<span class="s">"Next.js"</span>, <span class="s">"React"</span>],
+    <span class="s">"calidad"</span>: [<span class="s">"pruebas"</span>, <span class="s">"CI"</span>],
+}</pre>
+            <p class="panel__cap">Scripts, APIs y validación del lado del servidor, con pruebas automáticas.</p>
+          </article>
+
+          <article class="panel reveal" style="--i:2">
+            <div class="panel__no"><b>03</b><span class="label label--muted">Interfaz</span></div>
+            <h3>Maquetación web</h3>
+            <div class="boxmodel" role="img" aria-label="Diagrama del modelo de caja de CSS: margin, border, padding y contenido">
+              <div><span class="k">margin</span>
+                <div><span class="k">padding</span>
+                  <div><span class="k">border</span>
+                    <p class="core">HTML · CSS · JS</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="cssline"><b>display:</b> grid; <b>gap:</b> 24px;<br><b>@media</b> (max-width: 640px) { … }</p>
+            <p class="panel__cap">HTML semántico, diseño responsive, accesible y con animaciones sobrias.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE MÍ ================= -->
+    <section class="section" id="sobre-mi" data-mode="paper" aria-labelledby="sobre-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="label label--muted reveal">03 — Sobre mí</p>
+          <h2 class="title" id="sobre-title" style="grid-column:1/-1">
+            <span class="mask"><span>Del mostrador</span></span>
+            <span class="mask" style="--i:1"><span>al <em>código</em>.</span></span>
+          </h2>
+        </header>
+
+        <div class="about">
+          <p class="about__statement reveal">Conozco el problema desde adentro: desde 2021 trabajo con cobranzas, caja y pagos. Ahora construyo las herramientas que me hubiera gustado tener.</p>
+          <div class="about__text reveal" style="--i:1">
+            <p>Soy <strong>Martín Leal</strong>, desarrollador de sistemas. Estudio la Tecnicatura Superior en Desarrollo de Software y trabajo en tesorería en una empresa de logística y transporte de carga.</p>
+            <p><strong>Norte Sistemas</strong> es el nombre con el que desarrollo software: un proyecto personal que apunta a convertirse en una empresa de soluciones a medida. Hoy somos un equipo de uno, con las ganas de crecer.</p>
+          </div>
+
+          <ol class="timeline reveal">
+            <li><span class="when">2021</span><span class="what">Cobranzas y negociación</span><span class="where">Call center de recupero crediticio</span></li>
+            <li><span class="when">2022</span><span class="what">Comercial y auditoría de cobranzas</span><span class="where">Empresa de logística y transporte</span></li>
+            <li><span class="when">2023 → hoy</span><span class="what">Tesorería</span><span class="where">Caja, pagos a proveedores y rendiciones</span></li>
+            <li><span class="when">Hoy</span><span class="what">Desarrollo de software</span><span class="where">Tecnicatura en curso · Norte Sistemas</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="section" id="contacto" data-mode="ink" aria-labelledby="contacto-title">
+      <div class="wrap">
+        <p class="label label--muted reveal" style="margin-bottom:28px">04 — Contacto</p>
+        <div class="contact">
+          <div class="contact__main">
+            <h2 class="contact__big" id="contacto-title">
+              <span class="mask"><span>¿Hablamos<em>?</em></span></span>
+            </h2>
+            <a class="contact__mail reveal" id="mail" href="mailto:martinlealsf95@gmail.com">martinlealsf95@gmail.com</a>
+            <div class="contact__actions reveal" style="--i:1">
+              <button class="btn btn--signal" type="button" id="copy" data-magnetic>Copiar email</button>
+              <a class="btn" href="https://github.com/martinleal95" target="_blank" rel="noopener" data-magnetic>GitHub <span class="arrow" aria-hidden="true">↗</span></a>
+              <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
+            </div>
+            <p class="status reveal" style="--i:2">Abierto a proyectos y oportunidades</p>
+          </div>
+          <div class="contact__logo reveal" style="--i:1">
+            <img src="assets/norte-sistemas-logo.webp" width="720" height="720" alt="Logo de Norte Sistemas: una brújula con circuitos y el texto Norte Sistemas" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© <span id="year">2026</span> Norte Sistemas · Martín Leal</span>
+      <span>Hecho a mano con HTML, CSS y JavaScript</span>
+      <a href="#inicio">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
