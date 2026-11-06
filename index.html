@@ -65,7 +65,7 @@
       </nav>
       <div class="header-right">
         <span class="clock" id="clock" aria-hidden="true">ART --:--</span>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Modo nocturno">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
           <svg class="ico-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3a.6.6 0 0 0-.8-.7A10 10 0 1 0 21.7 15.3a.6.6 0 0 0-.7-.8Z"/></svg>
           <svg class="ico-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7"/></g></svg>
           <span class="theme-toggle__text">Noche</span>
@@ -96,7 +96,7 @@
             Diseño y construyo <strong>sistemas de gestión y sitios web a medida</strong>. Vengo del mundo de la tesorería y las cobranzas: primero entiendo cómo funciona el negocio, después lo convierto en software.
           </p>
 
-          <div class="terminal reveal" style="--i:2" aria-label="Consulta SQL de presentación">
+          <div class="terminal reveal" style="--i:2" role="group" aria-label="Consulta SQL de presentación">
             <div class="terminal__bar" aria-hidden="true"><i></i><i></i><i></i><span>norte.sql</span></div>
             <div class="terminal__body">
               <div class="terminal__cmd" aria-hidden="true">$ psql norte_sistemas</div>
@@ -137,7 +137,7 @@
             <span class="mask"><span>Software que resuelve</span></span>
             <span class="mask" style="--i:1"><span><em>problemas</em> reales.</span></span>
           </h2>
-          <p class="section__intro reveal">Cuatro proyectos de distintos tamaños. Los repositorios de clientes son privados: te muestro cómo funcionan en una demo.</p>
+          <p class="section__intro reveal">Cuatro proyectos de distintos tamaños. Algunos repositorios son privados: si te interesa uno, te lo muestro funcionando en una demo.</p>
         </header>
 
         <div class="projects">
@@ -145,7 +145,7 @@
           <!-- 01 · Pro-Athletic -->
           <article class="project project--feature">
             <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20de%20Pro-Athletic" aria-label="Pedir demo de Pro-Athletic (abre tu correo)" tabindex="-1" data-tilt>
-              <span class="project__index">01</span>
+              <span class="project__index" aria-hidden="true">01</span>
               <img class="shot" src="assets/projects/pro-athletic-960.webp" srcset="assets/projects/pro-athletic-640.webp 640w, assets/projects/pro-athletic-960.webp 960w, assets/projects/pro-athletic.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1000" alt="Portada de Pro-Athletic: el nombre del proyecto junto a la pantalla de rutina del día en un celular" loading="lazy" decoding="async">
               <span class="project__cta">Pedir demo ↗</span>
             </a>
@@ -166,7 +166,7 @@
           <!-- 02 · Farmacia -->
           <article class="project">
             <a class="project__media" href="https://farmaciasanjuanbautista.vercel.app/" target="_blank" rel="noopener" aria-label="Ver en línea: sitio de la farmacia (pestaña nueva)" tabindex="-1" data-tilt>
-              <span class="project__index">02</span>
+              <span class="project__index" aria-hidden="true">02</span>
               <img class="shot" src="assets/projects/farmacia-960.webp" srcset="assets/projects/farmacia-640.webp 640w, assets/projects/farmacia-960.webp 960w, assets/projects/farmacia.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1000" alt="Web de la farmacia: buscador, categorías y portada con botones de catálogo y promociones" loading="lazy" decoding="async">
               <span class="project__cta">Ver en línea ↗</span>
             </a>
@@ -186,7 +186,7 @@
           <!-- 03 · Climatización -->
           <article class="project">
             <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20del%20sitio%20para%20climatizaci%C3%B3n" aria-label="Pedir demo del sitio de Service Cool (abre tu correo)" tabindex="-1" data-tilt>
-              <span class="project__index">03</span>
+              <span class="project__index" aria-hidden="true">03</span>
               <img class="shot" src="assets/projects/climatizacion-960.webp" srcset="assets/projects/climatizacion-640.webp 640w, assets/projects/climatizacion-960.webp 960w, assets/projects/climatizacion.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1000" alt="Captura del inicio del sitio de Service Cool: título «El clima perfecto para tu negocio o hogar» y botón para pedir presupuesto" loading="lazy" decoding="async">
               <span class="project__cta">Pedir demo ↗</span>
             </a>
@@ -206,7 +206,7 @@
           <!-- 04 · Talonarios -->
           <article class="project">
             <a class="project__media" href="https://github.com/martinleal95/app-talonarios" target="_blank" rel="noopener" aria-label="Ver código de app-talonarios en GitHub (pestaña nueva)" tabindex="-1" data-tilt>
-              <span class="project__index">04</span>
+              <span class="project__index" aria-hidden="true">04</span>
               <img class="shot" src="assets/projects/talonarios-960.webp" srcset="assets/projects/talonarios-640.webp 640w, assets/projects/talonarios-960.webp 960w, assets/projects/talonarios.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1000" alt="Maqueta de la app de talonarios: formulario con los datos de la rifa y vista previa del PDF con talones numerados" loading="lazy" decoding="async">
               <span class="project__cta">Ver código ↗</span>
             </a>
@@ -262,7 +262,7 @@
           <article class="panel reveal" style="--i:1">
             <div class="panel__no"><b>02</b><span class="label label--muted">Lógica</span></div>
             <h3>Backend y scripts</h3>
-<pre class="code" aria-label="Diccionario de Python con las herramientas de la capa de lógica"><span class="c"># stack_logica.py</span>
+<pre class="code" role="group" aria-label="Diccionario de Python con las herramientas de la capa de lógica"><span class="c"># stack_logica.py</span>
 <span class="v">stack</span> = {
     <span class="s">"lenguajes"</span>: [<span class="s">"Python"</span>,
                   <span class="s">"JavaScript"</span>,
@@ -375,7 +375,8 @@
             </h2>
             <a class="contact__mail reveal" id="mail" href="mailto:martinlealsf95@gmail.com">martinlealsf95@gmail.com</a>
             <div class="contact__actions reveal" style="--i:1">
-              <button class="btn btn--signal" type="button" id="copy" data-magnetic>Copiar email</button>
+              <a class="btn btn--signal" href="https://wa.me/5493815261726?text=Hola%20Mart%C3%ADn%2C%20vi%20tu%20portafolio%20y%20quer%C3%ADa%20consultarte" target="_blank" rel="noopener" data-magnetic>WhatsApp <span class="arrow" aria-hidden="true">↗</span></a>
+              <button class="btn" type="button" id="copy" data-magnetic>Copiar email</button>
               <a class="btn" href="https://github.com/martinleal95" target="_blank" rel="noopener" data-magnetic>GitHub <span class="arrow" aria-hidden="true">↗</span></a>
               <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
             </div>

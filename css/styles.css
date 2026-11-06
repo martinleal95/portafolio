@@ -248,7 +248,7 @@ section[id] { scroll-margin-top: 64px; }
 .dbtable caption { text-align: left; color: var(--fg-2); padding-bottom: 8px; }
 .dbtable th { text-align: left; font-weight: 500; color: var(--signal); padding: 7px 8px 7px 0; border-bottom: 1.5px solid var(--fg); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
 .dbtable td { padding: 9px 8px 9px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
-.dbtable td:first-child { font-weight: 500; white-space: nowrap; }
+.dbtable td:first-child { font-weight: 500; overflow-wrap: anywhere; }
 .dbtable td:last-child { color: var(--fg-2); }
 
 .code { font: 400 .82rem/1.75 var(--font-mono); background: #0b0b0b; color: #F2EFE8; padding: 16px; border: 1px solid var(--line); overflow-x: auto; white-space: pre; tab-size: 4; }
@@ -350,7 +350,8 @@ html[data-theme="dark"] .project__media .shot { filter: brightness(.9); }
   .contact__logo { max-width: 360px; }
 }
 @media (max-width: 640px) {
-  .brand span, .clock, .theme-toggle__text { display: none; }
+  .brand span, .clock { display: none; }
+  .theme-toggle__text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   .theme-toggle { width: 36px; padding: 0; justify-content: center; }
   .brand svg { width: 22px; height: 28px; }
   .site-header .wrap { height: 56px; }
@@ -380,3 +381,9 @@ html[data-theme="dark"] .company__mark { background: #111; }
 /* Objetivos táctiles cómodos */
 .links a, .site-footer a, .contact__list a { display: inline-flex; align-items: center; min-height: 44px; }
 .links { align-items: center; }
+
+html { scroll-padding-top: 80px; }
+.panel, .stack > * { min-width: 0; }
+.dbtable { table-layout: fixed; width: 100%; }
+.brand { min-height: 44px; min-width: 24px; display: inline-flex; align-items: center; }
+@media (max-width: 380px) { .nav { gap: 8px; } .nav a { font-size: .62rem; letter-spacing: .02em; } .header-right { gap: 8px; } }
