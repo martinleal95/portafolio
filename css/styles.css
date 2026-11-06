@@ -328,7 +328,7 @@ html[data-theme="dark"] .project__media .shot { filter: brightness(.9); }
 
 .site-footer { border-top: 1px solid var(--line); padding-block: 26px; font: 500 .75rem var(--font-mono); letter-spacing: .06em; color: var(--fg-2); }
 .site-footer .wrap { align-items: center; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; }
-.site-footer a:hover { color: var(--signal); }
+.site-footer a:hover { color: var(--signal-text); }
 
 /* ==========================================================================
    RESPONSIVE
@@ -388,3 +388,4 @@ html { scroll-padding-top: 80px; }
 .brand { min-height: 44px; min-width: 24px; display: inline-flex; align-items: center; }
 @media (max-width: 380px) { .nav { gap: 8px; } .nav a { font-size: .62rem; letter-spacing: .02em; } .header-right { gap: 8px; } }
 html:not([data-theme="dark"]) body[data-mode="paper"] .company { background: #FAF8F3; }
+.marquee:hover .marquee__track, .marquee:focus-within .marquee__track { animation-play-state: paused; }
