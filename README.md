@@ -1,6 +1,6 @@
 # Portafolio · Martín Leal / Norte Sistemas
 
-Sitio estático (HTML, CSS y JavaScript sin dependencias) publicado con GitHub Pages:
+Sitio estático (paleta azul Norte Sistemas) (HTML, CSS y JavaScript sin dependencias) publicado con GitHub Pages:
 **https://martinleal95.github.io/portafolio/**
 
 ## Características

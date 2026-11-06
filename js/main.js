@@ -34,7 +34,7 @@
       themeBtn.setAttribute('aria-pressed', String(dark));
       const txt = $('.theme-toggle__text', themeBtn);
       if (txt) txt.textContent = dark ? 'Día' : 'Noche';
-      if (metaTheme) metaTheme.setAttribute('content', dark ? '#111111' : '#F2EFE8');
+      if (metaTheme) metaTheme.setAttribute('content', dark ? '#121A22' : '#F3F6F8');
       if (save) { try { localStorage.setItem('ns-theme', theme); } catch (_) { /* sin almacenamiento */ } }
     };
     apply(root.dataset.theme === 'dark' ? 'dark' : 'light', false);
