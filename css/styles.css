@@ -9,6 +9,7 @@
   --ink: #111111;
   --ink-2: #5A574F;
   --signal: #FF4B1F;
+  --signal-text: #D93A10; /* texto y foco sobre papel: 3,9:1 */
   --ok: #1F7A3D;
   --err: #C8102E;
 
@@ -37,6 +38,7 @@ html[data-theme="dark"] body {
   --fg-2: #A9A399;
   --line: rgba(242, 239, 232, .22);
   --ok: #4FBF73;
+  --signal-text: #FF4B1F;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -54,7 +56,8 @@ a { color: inherit; text-decoration: none; }
 button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
 ul { list-style: none; padding: 0; }
 ::selection { background: var(--signal); color: var(--ink); }
-:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--signal-text); outline-offset: 3px; }
+.btn--signal:focus-visible, .marquee :focus-visible, .project--cta :focus-visible, .skip:focus-visible { outline-color: var(--ink); box-shadow: 0 0 0 4px var(--paper); }
 
 .wrap { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -131,7 +134,7 @@ section[id] { scroll-margin-top: 64px; }
 .section__head { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; margin-bottom: clamp(40px, 7vw, 88px); align-items: end; }
 .section__head .label { grid-column: 1 / -1; }
 .title { grid-column: 1 / span 8; font: 300 clamp(2.4rem, 6.4vw, 5.2rem)/.98 var(--font-display); letter-spacing: -.035em; font-variation-settings: "opsz" 144, "SOFT" 40; }
-.title em { font-style: italic; font-weight: 300; color: var(--signal); }
+.title em { font-style: italic; font-weight: 300; color: var(--signal-text); }
 .section__intro { grid-column: 9 / -1; color: var(--fg-2); max-width: 38ch; }
 
 /* ==========================================================================
@@ -141,7 +144,7 @@ section[id] { scroll-margin-top: 64px; }
 .hero__meta { display: flex; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
 .hero__name { font: 300 clamp(4.2rem, 17.5vw, 16.5rem)/.84 var(--font-display); letter-spacing: -.05em; font-variation-settings: "opsz" 144, "SOFT" 60; margin-top: clamp(20px, 4vw, 48px); text-transform: none; }
 .hero__name .l2 { padding-left: clamp(0px, 14vw, 220px); font-style: italic; }
-.hero__name .dot { color: var(--signal); font-style: normal; }
+.hero__name .dot { color: var(--signal-text); font-style: normal; }
 .hero__grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px 24px; margin-top: clamp(32px, 5vw, 64px); align-items: start; }
 .hero__lead { grid-column: 1 / span 6; font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.5; max-width: 34ch; }
 .hero__lead strong { font-weight: 600; box-shadow: inset 0 -.38em 0 var(--signal); }
@@ -317,7 +320,8 @@ html[data-theme="dark"] .contact__logo .logo-dark { display: block; }
 .contact__list li { display: flex; gap: 16px; align-items: baseline; border-top: 1px solid var(--line); padding-top: 10px; }
 .contact__list span { min-width: 6.5em; opacity: .65; text-transform: uppercase; letter-spacing: .08em; font-size: .72rem; }
 .contact__list a { color: inherit; text-decoration: underline; text-underline-offset: 4px; }
-.contact__list a:hover, .contact__list a:focus-visible { color: var(--signal); }
+.contact__list a:hover, .contact__list a:focus-visible { color: var(--signal-text); }
+.contact__list b { font-weight: 500; }
 
 .site-footer { border-top: 1px solid var(--line); padding-block: 26px; font: 500 .75rem var(--font-mono); letter-spacing: .06em; color: var(--fg-2); }
 .site-footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; }
@@ -369,3 +373,7 @@ html[data-theme="dark"] .contact__logo .logo-dark { display: block; }
 html[data-theme="dark"] .terminal { background: #050505; border-color: var(--line); }
 html[data-theme="dark"] .project__media { background: #0b0b0b; }
 html[data-theme="dark"] .company__mark { background: #111; }
+
+/* Objetivos táctiles cómodos */
+.links a, .site-footer a, .contact__list a { display: inline-flex; align-items: center; min-height: 44px; }
+.links { align-items: center; }

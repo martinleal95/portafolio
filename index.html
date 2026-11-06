@@ -15,18 +15,23 @@
   <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <link rel="canonical" href="https://martinleal95.github.io/portafolio/">
-  <meta name="description" content="Martín Leal, desarrollador de sistemas en Tucumán. Sistemas de gestión, sitios web y bases de datos a medida con Norte Sistemas.">
   <meta property="og:url" content="https://martinleal95.github.io/portafolio/">
   <meta property="og:image" content="https://martinleal95.github.io/portafolio/assets/brand/og-image.png">
   <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Norte Sistemas — Martín Leal, desarrollador de sistemas">
   <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Martín Leal","jobTitle":"Desarrollador de sistemas","url":"https://martinleal95.github.io/portafolio/","email":"mailto:martinlealsf95@gmail.com","telephone":"+54 9 381 526-1726","sameAs":["https://github.com/martinleal95"],"worksFor":{"@type":"Organization","name":"Norte Sistemas"},"address":{"@type":"PostalAddress","addressCountry":"AR"}}</script>
+  <meta name="twitter:title" content="Martín Leal — Desarrollador de sistemas">
+  <meta name="twitter:description" content="Sistemas de gestión y sitios web a medida. Norte Sistemas.">
+  <meta name="twitter:image" content="https://martinleal95.github.io/portafolio/assets/brand/og-image.png">
+  <meta property="og:site_name" content="Norte Sistemas">
+  <meta name="color-scheme" content="light dark">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Martín Leal","jobTitle":"Desarrollador de sistemas","image":"https://martinleal95.github.io/portafolio/assets/brand/og-image.png","knowsAbout":["SQL","Python","Next.js","Supabase","PostgreSQL"],"url":"https://martinleal95.github.io/portafolio/","email":"mailto:martinlealsf95@gmail.com","telephone":"+54 9 381 526-1726","sameAs":["https://github.com/martinleal95"],"worksFor":{"@type":"Organization","name":"Norte Sistemas"},"address":{"@type":"PostalAddress","addressRegion":"Tucumán","addressCountry":"AR"}}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <noscript><style>.js .reveal,.js .mask>span,.js .terminal__result{opacity:1!important;transform:none!important}</style></noscript>
   <script>
     (function () {
       var d = document.documentElement;
@@ -60,7 +65,7 @@
       </nav>
       <div class="header-right">
         <span class="clock" id="clock" aria-hidden="true">ART --:--</span>
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Activar modo nocturno">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Modo nocturno">
           <svg class="ico-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3a.6.6 0 0 0-.8-.7A10 10 0 1 0 21.7 15.3a.6.6 0 0 0-.7-.8Z"/></svg>
           <svg class="ico-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7"/></g></svg>
           <span class="theme-toggle__text">Noche</span>
@@ -139,9 +144,9 @@
 
           <!-- 01 · Pro-Athletic -->
           <article class="project project--feature">
-            <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20de%20Pro-Athletic" aria-label="Pedir una demo de Pro-Athletic" data-tilt>
+            <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20de%20Pro-Athletic" aria-label="Pedir demo de Pro-Athletic (abre tu correo)" tabindex="-1" data-tilt>
               <span class="project__index">01</span>
-              <img class="shot" src="assets/projects/pro-athletic.webp" width="1600" height="1000" alt="Portada de Pro-Athletic: el nombre del proyecto junto a la pantalla de rutina del día en un celular" loading="lazy" decoding="async">
+              <img class="shot" src="assets/projects/pro-athletic-960.webp" srcset="assets/projects/pro-athletic-640.webp 640w, assets/projects/pro-athletic-960.webp 960w, assets/projects/pro-athletic.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1000" alt="Portada de Pro-Athletic: el nombre del proyecto junto a la pantalla de rutina del día en un celular" loading="lazy" decoding="async">
               <span class="project__cta">Pedir demo ↗</span>
             </a>
             <div class="project__body reveal">
@@ -160,18 +165,18 @@
 
           <!-- 02 · Farmacia -->
           <article class="project">
-            <a class="project__media" href="https://farmaciasanjuanbautista.vercel.app/" target="_blank" rel="noopener" aria-label="Abrir el sitio en línea de la farmacia (se abre en una pestaña nueva)" data-tilt>
+            <a class="project__media" href="https://farmaciasanjuanbautista.vercel.app/" target="_blank" rel="noopener" aria-label="Ver en línea: sitio de la farmacia (pestaña nueva)" tabindex="-1" data-tilt>
               <span class="project__index">02</span>
-              <img class="shot" src="assets/projects/farmacia.webp" width="1600" height="1000" alt="Web de la farmacia: buscador, categorías y portada con botones de catálogo y promociones" loading="lazy" decoding="async">
+              <img class="shot" src="assets/projects/farmacia-960.webp" srcset="assets/projects/farmacia-640.webp 640w, assets/projects/farmacia-960.webp 960w, assets/projects/farmacia.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1000" alt="Web de la farmacia: buscador, categorías y portada con botones de catálogo y promociones" loading="lazy" decoding="async">
               <span class="project__cta">Ver en línea ↗</span>
             </a>
             <div class="project__body reveal">
               <p class="project__state">En línea · farmaciasanjuanbautista.vercel.app</p>
               <h3 class="project__title">Catálogo y pedidos para farmacia</h3>
-              <p class="project__desc">Catálogo, promociones y pedidos por WhatsApp, con un panel privado para administrar productos, categorías e imágenes. Sin frameworks: la seguridad la impone la base de datos.</p>
+              <p class="project__desc">Catálogo, promociones y pedidos por WhatsApp, con un panel privado para administrar productos, categorías e imágenes. Los permisos los controla la base de datos: solo el dueño puede cambiar precios y productos.</p>
               <ul class="project__points">
                 <li>Reglas de negocio y permisos en PostgreSQL (RLS)</li>
-                <li>Precios y promociones siempre al día</li>
+                <li>Precios y promociones actualizables desde un panel privado</li>
               </ul>
               <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Supabase</li><li>SQL</li></ul>
               <p class="links"><a href="https://farmaciasanjuanbautista.vercel.app/" target="_blank" rel="noopener">Sitio en vivo <span class="arrow" aria-hidden="true">↗</span></a><span>Repositorio privado</span></p>
@@ -180,17 +185,17 @@
 
           <!-- 03 · Climatización -->
           <article class="project">
-            <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20del%20sitio%20para%20climatizaci%C3%B3n" aria-label="Pedir una demo del sitio de Service Cool" data-tilt>
+            <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20del%20sitio%20para%20climatizaci%C3%B3n" aria-label="Pedir demo del sitio de Service Cool (abre tu correo)" tabindex="-1" data-tilt>
               <span class="project__index">03</span>
-              <img class="shot" src="assets/projects/climatizacion.webp" width="1600" height="1000" alt="Captura del inicio del sitio de Service Cool: título "El clima perfecto para tu negocio o hogar" y botón para pedir presupuesto" loading="lazy" decoding="async">
+              <img class="shot" src="assets/projects/climatizacion-960.webp" srcset="assets/projects/climatizacion-640.webp 640w, assets/projects/climatizacion-960.webp 960w, assets/projects/climatizacion.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1000" alt="Captura del inicio del sitio de Service Cool: título «El clima perfecto para tu negocio o hogar» y botón para pedir presupuesto" loading="lazy" decoding="async">
               <span class="project__cta">Pedir demo ↗</span>
             </a>
             <div class="project__body reveal">
-              <p class="project__state">Propuesta · plantilla reutilizable</p>
+              <p class="project__state">Demo propia · plantilla reutilizable (no es un cliente real)</p>
               <h3 class="project__title">Service Cool — sitio corporativo</h3>
               <p class="project__desc">Plantilla corporativa donde todos los datos de la empresa viven en un único archivo de configuración. Incluye calculadora de eficiencia energética y widget de emergencias que deriva a WhatsApp.</p>
               <ul class="project__points">
-                <li>77 pruebas automáticas y CI en GitHub</li>
+                <li>Pruebas automáticas (Jest) y CI en GitHub</li>
                 <li>Tema claro/oscuro, accesibilidad y cabeceras de seguridad</li>
               </ul>
               <ul class="tags"><li>Next.js</li><li>React</li><li>TypeScript</li><li>GSAP</li><li>Jest</li></ul>
@@ -200,16 +205,16 @@
 
           <!-- 04 · Talonarios -->
           <article class="project">
-            <a class="project__media" href="https://github.com/martinleal95/app-talonarios" target="_blank" rel="noopener" aria-label="Ver app-talonarios en GitHub" data-tilt>
+            <a class="project__media" href="https://github.com/martinleal95/app-talonarios" target="_blank" rel="noopener" aria-label="Ver código de app-talonarios en GitHub (pestaña nueva)" tabindex="-1" data-tilt>
               <span class="project__index">04</span>
-              <img class="shot" src="assets/projects/talonarios.webp" width="1600" height="1000" alt="Maqueta de la app de talonarios: formulario con los datos de la rifa y vista previa del PDF con talones numerados" loading="lazy" decoding="async">
+              <img class="shot" src="assets/projects/talonarios-960.webp" srcset="assets/projects/talonarios-640.webp 640w, assets/projects/talonarios-960.webp 960w, assets/projects/talonarios.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1000" alt="Maqueta de la app de talonarios: formulario con los datos de la rifa y vista previa del PDF con talones numerados" loading="lazy" decoding="async">
               <span class="project__cta">Ver código ↗</span>
             </a>
             <div class="project__body reveal">
-              <p class="project__state">Código abierto · maqueta de la interfaz</p>
+              <p class="project__state">Código abierto · en desarrollo</p>
               <h3 class="project__title">App de talonarios y rifas</h3>
-              <p class="project__desc">Genera talonarios o rifas con la cantidad de números que necesites y devuelve un PDF listo para imprimir.</p>
-              <ul class="tags"><li>PDF</li><li>Utilidad</li></ul>
+              <p class="project__desc">Genera talonarios o rifas con la cantidad de números que necesites y devuelve un PDF listo para imprimir. Hoy el repositorio contiene la idea y la maqueta de la interfaz; la implementación está en desarrollo.</p>
+              <ul class="tags"><li>Generación de PDF</li><li>Impresión</li><li>Prototipo</li></ul>
               <p class="links"><a href="https://github.com/martinleal95/app-talonarios" target="_blank" rel="noopener">Código en GitHub ↗</a></p>
             </div>
           </article>
@@ -375,11 +380,11 @@
               <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
             </div>
             <ul class="contact__list reveal" style="--i:2">
-              <li><span>WhatsApp</span><a href="https://wa.me/5493815261726?text=Hola%20Mart%C3%ADn%2C%20vi%20tu%20portafolio%20y%20quer%C3%ADa%20consultarte" target="_blank" rel="noopener">+54 9 381 526-1726</a></li>
-              <li><span>Teléfono</span><a href="tel:+5493815261726">381 526-1726</a></li>
+              <li><span>WhatsApp y llamadas</span><a href="https://wa.me/5493815261726?text=Hola%20Mart%C3%ADn%2C%20vi%20tu%20portafolio%20y%20quer%C3%ADa%20consultarte" target="_blank" rel="noopener">+54 9 381 526-1726</a></li>
+              <li><span>Ubicación</span><b>Tucumán, Argentina</b></li>
               <li><span>GitHub</span><a href="https://github.com/martinleal95" target="_blank" rel="noopener">@martinleal95</a></li>
             </ul>
-            <p class="status reveal" style="--i:3">Abierto a proyectos y oportunidades · responde en el día</p>
+            <p class="status reveal" style="--i:3">Abierto a proyectos y oportunidades</p>
           </div>
           <div class="contact__logo reveal" style="--i:1">
             <img class="logo-light" src="assets/brand/logo-azul.svg" width="480" height="560" alt="Logo de Norte Sistemas: una brújula con circuitos y el texto Norte Sistemas" loading="lazy">

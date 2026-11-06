@@ -32,7 +32,6 @@
       root.dataset.theme = theme;
       const dark = theme === 'dark';
       themeBtn.setAttribute('aria-pressed', String(dark));
-      themeBtn.setAttribute('aria-label', dark ? 'Activar modo claro' : 'Activar modo nocturno');
       const txt = $('.theme-toggle__text', themeBtn);
       if (txt) txt.textContent = dark ? 'Día' : 'Noche';
       if (metaTheme) metaTheme.setAttribute('content', dark ? '#111111' : '#F2EFE8');
