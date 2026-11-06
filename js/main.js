@@ -107,11 +107,11 @@
           setTimeout(() => result.classList.add('is-in'), 350);
         }
       };
-      setTimeout(step, 700);
+      setTimeout(step, 350);
     };
     new IntersectionObserver((entries, obs) => {
       if (entries[0].isIntersecting) { start(); obs.disconnect(); }
-    }, { threshold: 0.3 }).observe($('.terminal'));
+    }, { threshold: 0.01 }).observe($('.terminal'));
   }
 
   /* ---------- Proyectos: parallax del mouse + círculo de revelación ---------- */
