@@ -31,7 +31,6 @@
     const apply = (theme, save) => {
       root.dataset.theme = theme;
       const dark = theme === 'dark';
-      themeBtn.setAttribute('aria-pressed', String(dark));
       const txt = $('.theme-toggle__text', themeBtn);
       if (txt) txt.textContent = dark ? 'Día' : 'Noche';
       if (metaTheme) metaTheme.setAttribute('content', dark ? '#121A22' : '#F3F6F8');

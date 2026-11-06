@@ -1,12 +1,12 @@
 # Portafolio · Martín Leal / Norte Sistemas
 
-Sitio estático (paleta azul Norte Sistemas) (HTML, CSS y JavaScript sin dependencias) publicado con GitHub Pages:
+Sitio estático (HTML, CSS y JavaScript, sin librerías; solo las fuentes vienen de Google Fonts) publicado con GitHub Pages:
 **https://martinleal95.github.io/portafolio/**
 
 ## Características
 - Modo claro/oscuro con preferencia guardada, y transición papel ↔ tinta por sección.
 - Animaciones con `IntersectionObserver`; respeta `prefers-reduced-motion`.
-- Accesible: enlace "saltar al contenido", foco visible, contrastes revisados, `aria-*` en controles.
+- Accesible: enlace "saltar al contenido", foco visible, contraste verificado con jueces externos (WCAG AA), `aria-*` en controles.
 - SEO: metadatos Open Graph, JSON-LD (`Person`), `sitemap.xml`, `robots.txt`, manifest, 404.
 
 ## Estructura

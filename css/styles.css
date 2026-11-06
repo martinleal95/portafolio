@@ -12,7 +12,7 @@
   --signal-2: #4FA8EC;      /* azul claro del degradé */
   --on-signal: #FFFFFF;
   --signal-text: #0A67A0;   /* texto y foco sobre papel: 5,6:1 */
-  --grad: linear-gradient(135deg, #4FA8EC 0%, #1F72A8 55%, #035F9A 100%);
+  --grad: linear-gradient(135deg, #1F72A8 0%, #035F9A 100%); /* fondos con texto blanco: >=5,3:1 */
   --grad-text: linear-gradient(135deg, #2A86C4 0%, #0A67A0 70%);
   --ok: #1F7A3D;
   --err: #C8102E;
@@ -137,7 +137,7 @@ html[data-theme="dark"] .theme-toggle .ico-sun { display: block; }
 /* --- Títulos de sección --------------------------------------------------- */
 section { position: relative; }
 section[id] { scroll-margin-top: 64px; }
-.section { padding-block: clamp(72px, 12vw, 160px); border-top: 1px solid var(--line); transition: border-color .6s var(--ease); }
+.section { padding-block: clamp(56px, 9vw, 112px); border-top: 1px solid var(--line); transition: border-color .6s var(--ease); }
 .section__head { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; margin-bottom: clamp(40px, 7vw, 88px); align-items: end; }
 .section__head .label { grid-column: 1 / -1; }
 .title { grid-column: 1 / span 8; font: 300 clamp(2.4rem, 6.4vw, 5.2rem)/.98 var(--font-display); letter-spacing: -.035em; font-variation-settings: "opsz" 144, "SOFT" 40; }
@@ -171,7 +171,7 @@ section[id] { scroll-margin-top: 64px; }
 .terminal__body { padding: 18px 18px 20px; min-height: 0; }
 .terminal__cmd { color: #A9B7BF; }
 .terminal__sql { white-space: pre-wrap; word-break: break-word; }
-.terminal__sql .kw { color: var(--signal); font-weight: 500; }
+.terminal__sql .kw { color: #6DB9F2; font-weight: 500; }
 .terminal__sql .str { color: #BFE0F7; }
 .terminal__caret { display: inline-block; width: .55em; height: 1.05em; background: var(--paper); vertical-align: -.18em; animation: blink 1s steps(1) infinite; }
 .terminal__result { margin-top: 14px; padding-top: 12px; border-top: 1px dashed rgba(227,234,238,.3); display: grid; grid-template-columns: auto 1fr; gap: 2px 14px; opacity: 0; transition: opacity .4s; }
@@ -234,8 +234,8 @@ section[id] { scroll-margin-top: 64px; }
 
 .project--cta { justify-content: center; align-items: flex-start; background: var(--grad); color: #fff; padding: clamp(24px, 4vw, 48px); border: 1.5px solid var(--ink); gap: 18px; align-self: start; }
 .project--cta .project__title { font-size: clamp(2rem, 3.6vw, 3rem); }
-.project--cta .btn { border-color: var(--ink); }
-.project--cta .btn:hover { background: var(--ink); color: var(--paper); }
+.project--cta .btn { background: #0E1720; color: #fff; border-color: #0E1720; }
+.project--cta .btn:hover { background: #fff; color: #0E1720; border-color: #fff; }
 
 /* --- Imágenes de proyecto (capturas, maqueta y portada) ------------------- */
 .shot { display: block; width: 100%; height: 100%; object-fit: cover; background: var(--paper-2); }
@@ -270,7 +270,7 @@ section[id] { scroll-margin-top: 64px; }
 .boxmodel > div > div { position: relative; padding: 22px 16px 16px; border: 1.5px solid var(--fg); background: color-mix(in srgb, var(--signal) 14%, transparent); }
 .boxmodel > div > div > div { position: relative; padding: 22px 14px 14px; border: 1.5px solid var(--fg); background: color-mix(in srgb, var(--signal) 30%, transparent); }
 .boxmodel .core { margin-top: 0; padding: 14px; border: 1.5px solid var(--fg); background: var(--fg); color: var(--bg); text-align: center; font-size: .78rem; letter-spacing: .04em; text-transform: none; }
-.boxmodel span.k { position: absolute; left: 8px; top: 5px; color: var(--fg-2); }
+.boxmodel span.k { position: absolute; left: 8px; top: 5px; color: var(--fg); font-size: .72rem; }
 .cssline { font: 400 .8rem/1.6 var(--font-mono); color: var(--fg-2); }
 .cssline b { font-weight: 500; color: var(--fg); }
 
@@ -451,3 +451,5 @@ html[data-theme="dark"] .norte__logo .logo-dark { display: block; }
   .nav a { white-space: nowrap; font-size: .64rem; }
   .header-right { flex: none; }
 }
+
+@media (max-width: 640px) { .nav { -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); padding-right: 18px; } }
