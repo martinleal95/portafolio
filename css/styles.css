@@ -387,3 +387,4 @@ html { scroll-padding-top: 80px; }
 .dbtable { table-layout: fixed; width: 100%; }
 .brand { min-height: 44px; min-width: 24px; display: inline-flex; align-items: center; }
 @media (max-width: 380px) { .nav { gap: 8px; } .nav a { font-size: .62rem; letter-spacing: .02em; } .header-right { gap: 8px; } }
+html:not([data-theme="dark"]) body[data-mode="paper"] .company { background: #FAF8F3; }
