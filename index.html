@@ -103,15 +103,13 @@
             <div class="terminal__bar" aria-hidden="true"><i></i><i></i><i></i><span>norte.sql</span></div>
             <div class="terminal__body">
               <div class="terminal__cmd" aria-hidden="true">$ psql norte_sistemas</div>
-              <pre class="terminal__sql" id="sql" data-text="SELECT nombre, rol, formacion, proyecto&#10;FROM desarrollador&#10;WHERE nombre = 'Martín Leal';"><span class="kw">SELECT</span> nombre, rol, formacion, proyecto
+              <pre class="terminal__sql" id="sql" data-text="SELECT nombre, rol, proyecto&#10;FROM desarrollador&#10;WHERE nombre = 'Martín Leal';"><span class="kw">SELECT</span> nombre, rol, proyecto
 <span class="kw">FROM</span> desarrollador
 <span class="kw">WHERE</span> nombre = <span class="str">'Martín Leal'</span>;</pre>
               <dl class="terminal__result is-in" id="sql-result">
                 <dt>nombre</dt><dd>Martín Leal</dd>
                 <dt>rol</dt><dd>Desarrollador de sistemas</dd>
-                <dt>formacion</dt><dd>Desarrollo de Software · 2022 → presente</dd>
                 <dt>proyecto</dt><dd>Norte Sistemas</dd>
-                <dt>estado</dt><dd class="ok">abierto a proyectos</dd>
               </dl>
             </div>
           </div>
@@ -144,7 +142,7 @@
 
         <div class="about">
           <figure class="portrait reveal">
-            <img src="assets/martin-810.webp" srcset="assets/martin-540.webp 540w, assets/martin-810.webp 810w, assets/martin-1080.webp 1080w" sizes="(max-width: 960px) 70vw, 30vw" width="810" height="1013" alt="Retrato de Martín Leal, camisa celeste a rayas, frente a una computadora" loading="lazy" decoding="async">
+            <img src="assets/martin-810.webp" srcset="assets/martin-540.webp 540w, assets/martin-810.webp 810w" sizes="(max-width: 960px) 70vw, 30vw" width="810" height="1013" alt="Retrato de Martín Leal, camisa celeste a rayas, frente a una computadora" loading="lazy" decoding="async">
             <figcaption class="label">Martín Leal · Tucumán</figcaption>
           </figure>
 
@@ -157,7 +155,6 @@
 
             <dl class="facts reveal" style="--i:2">
               <div><dt>Formación</dt><dd>Tecnicatura Superior en Desarrollo de Software<br><span>Instituto 9 de Julio · 2022 → presente · estudiante avanzado</span></dd></div>
-              <div><dt>Ubicación</dt><dd>Tucumán, Argentina</dd></div>
               <div><dt>Habilidades blandas</dt><dd>
                 <ul class="chips"><li>Escucha activa</li><li>Comunicación clara</li><li>Trabajo en equipo</li><li>Gestión del tiempo</li><li>Adaptabilidad</li><li>Resolución de conflictos</li><li>Persuasión</li></ul>
               </dd></div>
@@ -189,9 +186,9 @@
             <article class="norte__col reveal">
               <p class="label label--muted">Qué hago</p>
               <ul class="norte__list">
-                <li><b>Sistemas de gestión</b> para comercios, clubes y empresas chicas.</li>
-                <li><b>Sitios web</b> rápidos, accesibles y fáciles de mantener.</li>
-                <li><b>Bases de datos</b> bien modeladas, con permisos y respaldos.</li>
+                <li><b>Sistemas de gestión</b> a medida, como Pro-Athletic para gimnasios.</li>
+                <li><b>Sitios web</b> como el de la farmacia o el de Service Cool.</li>
+                <li><b>Bases de datos</b> relacionales con permisos definidos en la propia base.</li>
               </ul>
             </article>
             <article class="norte__col reveal" style="--i:1">
@@ -227,7 +224,7 @@
 
           <!-- 01 · Pro-Athletic -->
           <article class="project project--feature">
-            <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20de%20Pro-Athletic" aria-label="Pedir demo de Pro-Athletic (abre tu correo)" tabindex="-1" data-tilt>
+            <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20de%20Pro-Athletic" tabindex="-1" aria-hidden="true" data-tilt>
               <span class="project__index" aria-hidden="true">01</span>
               <img class="shot" src="assets/projects/pro-athletic-960.webp" srcset="assets/projects/pro-athletic-640.webp 640w, assets/projects/pro-athletic-960.webp 960w, assets/projects/pro-athletic.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1000" alt="Portada de Pro-Athletic: el nombre del proyecto junto a la pantalla de rutina del día en un celular" loading="lazy" decoding="async">
               <span class="project__cta">Pedir demo ↗</span>
@@ -248,7 +245,7 @@
 
           <!-- 02 · Farmacia -->
           <article class="project">
-            <a class="project__media" href="https://farmaciasanjuanbautista.vercel.app/" target="_blank" rel="noopener" aria-label="Ver en línea: sitio de la farmacia (pestaña nueva)" tabindex="-1" data-tilt>
+            <a class="project__media" href="https://farmaciasanjuanbautista.vercel.app/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true" data-tilt>
               <span class="project__index" aria-hidden="true">02</span>
               <img class="shot" src="assets/projects/farmacia-960.webp" srcset="assets/projects/farmacia-640.webp 640w, assets/projects/farmacia-960.webp 960w, assets/projects/farmacia.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1000" alt="Sitio de la Farmacia San Juan Bautista en línea: portada con catálogo, promociones, horarios, dirección y botón de WhatsApp" loading="lazy" decoding="async">
               <span class="project__cta">Ver en línea ↗</span>
@@ -268,7 +265,7 @@
 
           <!-- 03 · Climatización -->
           <article class="project">
-            <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20del%20sitio%20para%20climatizaci%C3%B3n" aria-label="Pedir demo del sitio de Service Cool (abre tu correo)" tabindex="-1" data-tilt>
+            <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20del%20sitio%20para%20climatizaci%C3%B3n" tabindex="-1" aria-hidden="true" data-tilt>
               <span class="project__index" aria-hidden="true">03</span>
               <img class="shot" src="assets/projects/climatizacion-960.webp" srcset="assets/projects/climatizacion-640.webp 640w, assets/projects/climatizacion-960.webp 960w, assets/projects/climatizacion.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1000" alt="Captura del inicio del sitio de Service Cool: título «El clima perfecto para tu negocio o hogar» y botón para pedir presupuesto" loading="lazy" decoding="async">
               <span class="project__cta">Pedir demo ↗</span>
@@ -288,7 +285,7 @@
 
           <!-- 04 · Talonarios -->
           <article class="project">
-            <a class="project__media" href="https://github.com/martinleal95/app-talonarios" target="_blank" rel="noopener" aria-label="Ver código de app-talonarios en GitHub (pestaña nueva)" tabindex="-1" data-tilt>
+            <a class="project__media" href="https://github.com/martinleal95/app-talonarios" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true" data-tilt>
               <span class="project__index" aria-hidden="true">04</span>
               <img class="shot" src="assets/projects/talonarios-960.webp" srcset="assets/projects/talonarios-640.webp 640w, assets/projects/talonarios-960.webp 960w, assets/projects/talonarios.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1000" alt="Maqueta de la app de talonarios: formulario con los datos de la rifa y vista previa del PDF con talones numerados" loading="lazy" decoding="async">
               <span class="project__cta">Ver código ↗</span>
