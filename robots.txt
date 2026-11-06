@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://martinleal95.github.io/portafolio/sitemap.xml
