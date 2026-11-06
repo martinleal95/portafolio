@@ -22,6 +22,28 @@
     setInterval(tick, 20000);
   }
 
+
+  /* ---------- Modo nocturno ---------- */
+  const themeBtn = $('#theme-toggle');
+  if (themeBtn) {
+    const root = document.documentElement;
+    const metaTheme = $('meta[name="theme-color"]');
+    const apply = (theme, save) => {
+      root.dataset.theme = theme;
+      const dark = theme === 'dark';
+      themeBtn.setAttribute('aria-pressed', String(dark));
+      themeBtn.setAttribute('aria-label', dark ? 'Activar modo claro' : 'Activar modo nocturno');
+      const txt = $('.theme-toggle__text', themeBtn);
+      if (txt) txt.textContent = dark ? 'Día' : 'Noche';
+      if (metaTheme) metaTheme.setAttribute('content', dark ? '#111111' : '#F2EFE8');
+      if (save) { try { localStorage.setItem('ns-theme', theme); } catch (_) { /* sin almacenamiento */ } }
+    };
+    apply(root.dataset.theme === 'dark' ? 'dark' : 'light', false);
+    themeBtn.addEventListener('click', () => {
+      apply(root.dataset.theme === 'dark' ? 'light' : 'dark', true);
+    });
+  }
+
   /* ---------- Scroll reveal ---------- */
   const revealIO = new IntersectionObserver((entries) => {
     entries.forEach((e) => {

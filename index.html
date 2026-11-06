@@ -16,7 +16,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add('js');
+      try { d.dataset.theme = localStorage.getItem('ns-theme') === 'dark' ? 'dark' : 'light'; }
+      catch (e) { d.dataset.theme = 'light'; }
+    })();
+  </script>
 </head>
 <body data-mode="paper">
 
@@ -40,7 +47,15 @@
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <span class="clock" id="clock" aria-hidden="true">ART --:--</span>
+      <div class="header-right">
+        <span class="clock" id="clock" aria-hidden="true">ART --:--</span>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Activar modo nocturno">
+          <svg class="ico-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21 14.5A8.5 8.5 0 0 1 9.5 3a.6.6 0 0 0-.8-.7A10 10 0 1 0 21.7 15.3a.6.6 0 0 0-.7-.8Z"/></svg>
+          <svg class="ico-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7"/></g></svg>
+          <span class="theme-toggle__text">Noche</span>
+        </button>
+
+      </div>
     </div>
   </header>
 
@@ -115,16 +130,7 @@
           <article class="project project--feature">
             <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20de%20Pro-Athletic" aria-label="Pedir una demo de Pro-Athletic" data-tilt>
               <span class="project__index">01</span>
-              <div class="shot shot--app" role="img" aria-label="Ilustración esquemática de un panel de gestión con estadísticas y gráfico de progreso">
-                <div class="shot__bar"><i></i><i></i><i></i><b></b></div>
-                <div class="shot__body">
-                  <aside><i></i><i></i><i></i><i></i></aside>
-                  <div class="main">
-                    <div class="kpis"><i class="line"></i><i class="line"></i><i class="soft"></i></div>
-                    <div class="chart"><i style="--h:38%"></i><i style="--h:52%"></i><i style="--h:44%"></i><i style="--h:70%"></i><i style="--h:92%"></i><i style="--h:66%"></i><i style="--h:80%"></i></div>
-                  </div>
-                </div>
-              </div>
+              <img class="shot" src="assets/projects/pro-athletic.webp" width="1600" height="1000" alt="Portada de Pro-Athletic: el nombre del proyecto junto a la pantalla de rutina del día en un celular" loading="lazy" decoding="async">
               <span class="project__cta">Pedir demo ↗</span>
             </a>
             <div class="project__body reveal">
@@ -145,18 +151,11 @@
           <article class="project">
             <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20de%20la%20web%20para%20farmacia" aria-label="Pedir una demo de la web para farmacia" data-tilt>
               <span class="project__index">02</span>
-              <div class="shot shot--store" role="img" aria-label="Ilustración esquemática de un catálogo de productos con banner y grilla">
-                <div class="shot__bar"><i></i><i></i><i></i><b></b></div>
-                <div class="shot__body">
-                  <div class="head"><i class="fill"></i><i class="soft"></i><i class="sig"></i></div>
-                  <i class="sig"></i>
-                  <div class="grid4"><i></i><i></i><i></i><i></i></div>
-                </div>
-              </div>
+              <img class="shot" src="assets/projects/farmacia.webp" width="1600" height="1000" alt="Captura de la web de la farmacia en versión de demostración: buscador, categorías y portada con botones de catálogo y promociones" loading="lazy" decoding="async">
               <span class="project__cta">Pedir demo ↗</span>
             </a>
             <div class="project__body reveal">
-              <p class="project__state">En pruebas</p>
+              <p class="project__state">En pruebas · captura con datos de demostración</p>
               <h3 class="project__title">Catálogo y pedidos para farmacia</h3>
               <p class="project__desc">Catálogo, promociones y pedidos por WhatsApp, con un panel privado para administrar productos, categorías e imágenes. Sin frameworks: la seguridad la impone la base de datos.</p>
               <ul class="project__points">
@@ -170,20 +169,14 @@
 
           <!-- 03 · Climatización -->
           <article class="project">
-            <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20del%20sitio%20para%20climatizaci%C3%B3n" aria-label="Pedir una demo del sitio para empresa de climatización" data-tilt>
+            <a class="project__media" href="mailto:martinlealsf95@gmail.com?subject=Demo%20del%20sitio%20para%20climatizaci%C3%B3n" aria-label="Pedir una demo del sitio de Service Cool" data-tilt>
               <span class="project__index">03</span>
-              <div class="shot shot--cool" role="img" aria-label="Ilustración esquemática de un sitio corporativo con titular, botón y un dial de temperatura">
-                <div class="shot__bar"><i></i><i></i><i></i><b></b></div>
-                <div class="shot__body">
-                  <div class="copy"><i></i><i></i><i></i><i></i></div>
-                  <div class="dialwrap"><div class="dial"></div><b>22°</b></div>
-                </div>
-              </div>
+              <img class="shot" src="assets/projects/climatizacion.webp" width="1600" height="1000" alt="Captura del inicio del sitio de Service Cool: título "El clima perfecto para tu negocio o hogar" y botón para pedir presupuesto" loading="lazy" decoding="async">
               <span class="project__cta">Pedir demo ↗</span>
             </a>
             <div class="project__body reveal">
               <p class="project__state">Propuesta · plantilla reutilizable</p>
-              <h3 class="project__title">Sitio para empresa de climatización</h3>
+              <h3 class="project__title">Service Cool — sitio corporativo</h3>
               <p class="project__desc">Plantilla corporativa donde todos los datos de la empresa viven en un único archivo de configuración. Incluye calculadora de eficiencia energética y widget de emergencias que deriva a WhatsApp.</p>
               <ul class="project__points">
                 <li>77 pruebas automáticas y CI en GitHub</li>
@@ -198,21 +191,11 @@
           <article class="project">
             <a class="project__media" href="https://github.com/martinleal95/app-talonarios" target="_blank" rel="noopener" aria-label="Ver app-talonarios en GitHub" data-tilt>
               <span class="project__index">04</span>
-              <div class="shot shot--ticket" role="img" aria-label="Ilustración esquemática de talonarios numerados listos para imprimir">
-                <div class="shot__bar"><i></i><i></i><i></i><b></b></div>
-                <div class="shot__body">
-                  <div class="tk"><span>N° 001</span><span>001</span></div>
-                  <div class="tk"><span>N° 002</span><span>002</span></div>
-                  <div class="tk"><span>N° 003</span><span>003</span></div>
-                  <div class="tk"><span>N° 004</span><span>004</span></div>
-                  <div class="tk"><span>N° 005</span><span>005</span></div>
-                  <div class="tk"><span>N° 006</span><span>006</span></div>
-                </div>
-              </div>
+              <img class="shot" src="assets/projects/talonarios.webp" width="1600" height="1000" alt="Maqueta de la app de talonarios: formulario con los datos de la rifa y vista previa del PDF con talones numerados" loading="lazy" decoding="async">
               <span class="project__cta">Ver código ↗</span>
             </a>
             <div class="project__body reveal">
-              <p class="project__state">Código abierto</p>
+              <p class="project__state">Código abierto · maqueta de la interfaz</p>
               <h3 class="project__title">App de talonarios y rifas</h3>
               <p class="project__desc">Genera talonarios o rifas con la cantidad de números que necesites y devuelve un PDF listo para imprimir.</p>
               <ul class="tags"><li>PDF</li><li>Utilidad</li></ul>
@@ -308,16 +291,59 @@
         <div class="about">
           <p class="about__statement reveal">Conozco el problema desde adentro: desde 2021 trabajo con cobranzas, caja y pagos. Ahora construyo las herramientas que me hubiera gustado tener.</p>
           <div class="about__text reveal" style="--i:1">
-            <p>Soy <strong>Martín Leal</strong>, desarrollador de sistemas. Estudio la Tecnicatura Superior en Desarrollo de Software y trabajo en tesorería en una empresa de logística y transporte de carga.</p>
+            <p>Soy <strong>Martín Leal</strong>, desarrollador de sistemas. Estudio la Tecnicatura Superior en Desarrollo de Software y trabajo en tesorería en Expreso Rivadavia, una empresa de logística y transporte de carga.</p>
             <p><strong>Norte Sistemas</strong> es el nombre con el que desarrollo software: un proyecto personal que apunta a convertirse en una empresa de soluciones a medida. Hoy somos un equipo de uno, con las ganas de crecer.</p>
           </div>
 
-          <ol class="timeline reveal">
-            <li><span class="when">2021</span><span class="what">Cobranzas y negociación</span><span class="where">Call center de recupero crediticio</span></li>
-            <li><span class="when">2022</span><span class="what">Comercial y auditoría de cobranzas</span><span class="where">Empresa de logística y transporte</span></li>
-            <li><span class="when">2023 → hoy</span><span class="what">Tesorería</span><span class="where">Caja, pagos a proveedores y rendiciones</span></li>
-            <li><span class="when">Hoy</span><span class="what">Desarrollo de software</span><span class="where">Tecnicatura en curso · Norte Sistemas</span></li>
-          </ol>
+          <div class="companies" id="experiencia">
+            <p class="label label--muted companies__label reveal">Experiencia laboral</p>
+
+            <article class="company reveal">
+              <header class="company__head">
+                <figure class="company__mark" aria-hidden="true"><span>ER</span></figure>
+                <div>
+                  <h3 class="company__name">Expreso Rivadavia</h3>
+                  <p class="company__sector">Logística · transporte de carga general</p>
+                </div>
+                <span class="company__years">2022 → hoy</span>
+              </header>
+              <ol class="roles">
+                <li>
+                  <p class="role__when">Ene 2023 → actualidad</p>
+                  <h4 class="role__title">Tesorero / Auxiliar de Tesorería</h4>
+                  <p class="role__desc">Caja diaria, pagos a proveedores y cheques, rendiciones de choferes y contra-reembolsos, arqueos y cierres, atención en ventanilla con terminales de pago.</p>
+                </li>
+                <li>
+                  <p class="role__when">Abr 2022 → Ene 2023</p>
+                  <h4 class="role__title">Comercial</h4>
+                  <p class="role__desc">Cotizaciones y gestión de envíos, seguimiento de clientes y coordinación de logística.</p>
+                </li>
+                <li>
+                  <p class="role__when">Ene 2022 → Abr 2022</p>
+                  <h4 class="role__title">Auditor de Cobranzas</h4>
+                  <p class="role__desc">Control de pagos pendientes y recupero de cuentas en mora.</p>
+                </li>
+              </ol>
+            </article>
+
+            <article class="company reveal" style="--i:1">
+              <header class="company__head">
+                <figure class="company__mark" aria-hidden="true"><span>RC</span></figure>
+                <div>
+                  <h3 class="company__name">Recupero Crediticio</h3>
+                  <p class="company__sector">Grupo Ostengo · call center, sector cobranzas</p>
+                </div>
+                <span class="company__years">2021</span>
+              </header>
+              <ol class="roles">
+                <li>
+                  <p class="role__when">Ene 2021 → Dic 2021</p>
+                  <h4 class="role__title">Ejecutivo de Cobranzas</h4>
+                  <p class="role__desc">Cobranzas telefónicas, negociación de pagos y refinanciaciones, manejo de objeciones y escucha activa.</p>
+                </li>
+              </ol>
+            </article>
+          </div>
         </div>
       </div>
     </section>
