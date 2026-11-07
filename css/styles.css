@@ -453,3 +453,8 @@ html[data-theme="dark"] .norte__logo .logo-dark { display: block; }
 }
 
 @media (max-width: 640px) { .nav { -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); padding-right: 18px; } }
+
+.company--now { grid-column: 1 / -1; border-color: var(--signal); }
+.company--now .company__mark { background: var(--paper); color: var(--signal); }
+html[data-theme="dark"] .company--now .company__mark { background: #1B2530; color: var(--signal); }
+.chips li { line-height: 1.3; }
